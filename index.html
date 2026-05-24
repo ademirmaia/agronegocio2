@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroProdutivo - Cálculo de Produtividade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>AgroProdutivo</h1>
+        <p>Tecnologia e planeamento para maximizar a sua colheita</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Calculadora de Produção</h2>
+            <p class="card-subtitle">Descubra a estimativa de sacas com base na área plantada.</p>
+            
+            <form id="calc-form">
+                <div class="form-group">
+                    <label for="cultura">Tipo de Cultura:</label>
+                    <select id="cultura">
+                        <option value="soja">Soja (Saca de 60kg)</option>
+                        <option value="milho">Milho (Saca de 60kg)</option>
+                        <option value="café">Café (Saca de 60kg)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área da Terra (em Hectares):</label>
+                    <input type="number" id="area" min="0" step="0.1" placeholder="Ex: 50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="produtividade">Produtividade Média (Sacas por Hectare):</label>
+                    <input type="number" id="produtividade" min="0" step="0.1" placeholder="Ex: 65" required>
+                </div>
+
+                <button type="button" onclick="calcularProducao()">Calcular Produção Total</button>
+            </form>
+
+            <div id="resultado" class="result-box">
+                <h3>Resultado Estimado</h3>
+                <p id="resultado-texto"></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Importância do Planeamento</h2>
+            <p>O cálculo de sacas por hectare é um dos indicadores mais importantes para a gestão do agronegócio moderno. Ele permite ao produtor:</p>
+            
+            <ul class="info-list">
+                <li><strong>Previsibilidade Financeira:</strong> Estimar o faturamento bruto antes mesmo do início da colheita.</li>
+                <li><strong>Logística Eficiente:</strong> Planear a quantidade de camiões necessários para o transporte e o espaço de armazenamento em silos.</li>
+                <li><strong>Tomada de Decisão:</strong> Avaliar se o investimento em fertilizantes e tecnologia se converteu em ganho real de produtividade.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgroProdutivo - Soluções Digitais para o Campo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
